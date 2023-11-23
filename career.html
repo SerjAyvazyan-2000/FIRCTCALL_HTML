@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FirstCall</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/flex.css">
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <!--       ========================================HEADER START===========================-->
+    <header class="header">
+        <div class="G-container">
+            <div class="header_content">
+                <a onclick="srollBottom()" href="home.html" class="header_logo">
+                    <img src="assets/svgIcons/Frame%205464%20(2).svg" alt="">
+                </a>
+                <div class="header_menu" id="menuContainer">
+                    <div onClick="onClose(false)" class="header_menu_bg"></div>
+
+                    <nav class="menu_block">
+                        <ul>
+                            <li>
+                                <a onclick="srollBottom()" href="./services.html">SERVICE</a>
+                            </li>
+                            <li>
+                                <a onclick="srollBottom()" href="./career.html">CAREER</a>
+                            </li>
+                            <li>
+                                <a onclick="srollBottom()" href="./services.html">References</a>
+                            </li>
+                            <li>
+                                <a onclick="srollBottom()" href="./blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a onclick="srollBottom()" href="./about.html">ABOUT US</a>
+                            </li>
+
+                            <div class="mobile_header_download">
+                                <div class="{openSub ? 'mobile_header_language active' : 'mobile_header_language'}">
+                                    <button onclick="handleClick()">LANGUAGES
+                                        <img src="./assets/svgIcons/ArrowDownRight%20(5).svg" alt=""/>
+                                    </button>
+                                    <div class="header_language_sub">
+                                        <a class="header_language_en">EN</a>
+                                        <a class="header_language_de">DE</a>
+                                    </div>
+                                </div>
+                                <div class="about_header_download_btn">
+                                    <button class='header_download_btn_white'>White paper
+                                        <img src="./assets/svgIcons/DownloadSimple%20(3).svg" alt=""/>
+
+                                    </button>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header_download">
+                    <div class="header_language">
+                        <a href="#" class="header_language_en">EN</a>
+                        <a href="#" class="header_language_de">DE</a>
+                    </div>
+                    <div class="header_download_btn">
+                        <button onclick="handleDownload('white')" class='header_download_btn_white '>White paper
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M9.00024 0.3125C9.37994 0.3125 9.68774 0.620304 9.68774 1V9.40273L11.9516 7.13886C12.2201 6.87038 12.6554 6.87038 12.9239 7.13886C13.1924 7.40735 13.1924 7.84265 12.9239 8.11114L9.48638 11.5486C9.21789 11.8171 8.78259 11.8171 8.51411 11.5486L5.07661 8.11114C4.80812 7.84265 4.80812 7.40735 5.07661 7.13886C5.34509 6.87038 5.78039 6.87038 6.04888 7.13886L8.31274 9.40273V1C8.31274 0.620304 8.62055 0.3125 9.00024 0.3125ZM2.125 11.0625C2.125 10.6828 1.8172 10.375 1.4375 10.375C1.0578 10.375 0.75 10.6828 0.75 11.0625V15.875C0.75 16.2397 0.894866 16.5894 1.15273 16.8473C1.41059 17.1051 1.76033 17.25 2.125 17.25H15.875C16.2397 17.25 16.5894 17.1051 16.8473 16.8473C17.1051 16.5894 17.25 16.2397 17.25 15.875V11.0625C17.25 10.6828 16.9422 10.375 16.5625 10.375C16.1828 10.375 15.875 10.6828 15.875 11.0625V15.875H2.125V11.0625Z"
+                                      fill="black"/>
+                            </svg>
+                        </button>
+                        <button onclick="handleDownload('red')" class="header_download_btn_red ">L’ets start</button>
+                    </div>
+                </div>
+
+                <div onclick="handleClick()" class="burger_menu" id="burgerMenu">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!--       ========================================animate START===========================-->
+
+        <section class="animate_top_section">
+            <div class="G-container">
+                <div class="top_section_body">
+                    <div class="animation_text_content">
+                        <h3>CAREERS CENTER</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit HOME</p>
+                    </div>
+                    <div class="animation_content-image">
+                        <img src="assets/svgIcons/1 (5).svg" alt="Description of the image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="careers_open_roles">
+            <div class="G-container">
+                <div class="open_roles_title">Open roles</div>
+                <div class="open_roles_list" id="rolesListContainer">
+                    <script>
+                        const rolesList = [
+                            {
+                                title: 'Internal sales force with focus on telesales (m/f/d)',
+                                description: "Attention, sales cracks! We are looking for sales talents who are really into telesales. Our company is a powerhouse for software solutions across various industries, and we are looking for dedicated inside sales people (m/f/d) to join our dream team. We don't just sell -" +
+                                    " we really put our heart and soul into individual, expert advice that....",
+                                route: 'APPLY FOR A JOB',
+                                icon: 'assets/svgIcons/ArrowDownRight (7).svg',
+                                id: 1,
+                                details: {
+                                    title1: 'Internal sales force with focus on telesales (m/f/d)',
+                                    subTilte: 'Attention, sales cracks! We are looking for sales talents who are really into telesales. Our company is a powerhouse for software solutions across various industries, and we are looking' +
+                                        ' for dedicated inside sales people (m/f/d) to join our dream team. ',
+                                    subTitleChild: 'We don\'t just sell - we really put our heart and soul into individual, expert advice that blows our customers away.',
+                                    subTitleChild2: 'Are you ready to bring your sales talent to us and take off together with us? Then go for it!',
+                                    subTitleChild3: 'Please note: At 520 base, working hours are from 09:00 to 12:00. ',
+                                    title2: 'Duties:',
+                                    point1: "Calendar King: You are the master of making appointments! Get ready to organize the field like a pro and make the calendar glow.",
+                                    point2: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point3: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point4: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point5: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point6: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    title3: 'Requirements:',
+                                    point7: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point8: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point9: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point10: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point11: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point12: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    title: 'We offer:',
+                                    point13: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point14: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point15: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point16: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point17: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+                                    point18: "Software Wizard: Your magic is providing expert advice! Help our customers find the perfect software solution and use it like a pro.",
+
+                                }
+                            },
+                            {
+                                title: 'Internal sales force with focus on telesales (m/f/d)',
+                                description: "Attention, sales cracks! We are looking for sales talents who are really into telesales. Our company is a powerhouse for software solutions across various industries, and we are looking for dedicated inside sales people (m/f/d) to join our dream team. We don't just sell -" +
+                                    " we really put our heart and soul into individual, expert advice that....",
+                                route: 'APPLY FOR A JOB',
+                                icon: 'assets/svgIcons/ArrowDownRight (7).svg',
+                                id: 2
+                            },
+                            {
+                                title: 'Internal sales force with focus on telesales (m/f/d)',
+                                description: "Attention, sales cracks! We are looking for sales talents who are really into telesales. Our company is a powerhouse for software solutions across various industries, and we are looking for dedicated inside sales people (m/f/d) to join our dream team. We don't just sell -" +
+                                    " we really put our heart and soul into individual, expert advice that....",
+                                route: 'APPLY FOR A JOB',
+                                icon: 'assets/svgIcons/ArrowDownRight (7).svg',
+                                id: 3
+                            },
+                            {
+                                title: 'Internal sales force with focus on telesales (m/f/d)',
+                                description: "Attention, sales cracks! We are looking for sales talents who are really into telesales. Our company is a powerhouse for software solutions across various industries, and we are looking for dedicated inside sales people (m/f/d) to join our dream team. We don't just sell -" +
+                                    " we really put our heart and soul into individual, expert advice that....",
+                                route: 'APPLY FOR A JOB',
+                                icon: 'assets/svgIcons/ArrowDownRight (7).svg',
+                                id: 4
+                            },
+                            {
+                                title: 'Internal sales force with focus on telesales (m/f/d)',
+                                description: "Attention, sales cracks! We are looking for sales talents who are really into telesales. Our company is a powerhouse for software solutions across various industries, and we are looking for dedicated inside sales people (m/f/d) to join our dream team. We don't just sell -" +
+                                    " we really put our heart and soul into individual, expert advice that....",
+                                route: 'APPLY FOR A JOB',
+                                icon: 'assets/svgIcons/ArrowDownRight (7).svg',
+                                id: 5
+                            },
+                            {
+                                title: 'Internal sales force with focus on telesales (m/f/d)',
+                                description: "Attention, sales cracks! We are looking for sales talents who are really into telesales. Our company is a powerhouse for software solutions across various industries, and we are looking for dedicated inside sales people (m/f/d) to join our dream team. We don't just sell -" +
+                                    " we really put our heart and soul into individual, expert advice that....",
+                                route: 'APPLY FOR A JOB',
+                                icon: 'assets/svgIcons/ArrowDownRight (7).svg',
+                                id: 6
+                            },
+                        ];
+
+                        function handleClick() {
+                            window.scroll({
+                                top: 0,
+                                left: 0,
+                                behavior: 'smooth'
+                            });
+                        }
+
+                        function createRolesItem(item) {
+                            const container = document.createElement('div');
+                            container.className = 'career_roles_item';
+
+                            const texts = document.createElement('div');
+                            texts.className = 'roles_item_texts';
+                            texts.innerHTML = `
+            <a onclick="handleClick()" href='careerDetails.html'>${item.title}</a>
+            <p>${item.description}</p>
+        `;
+                            container.appendChild(texts);
+
+                            const tools = document.createElement('div');
+                            tools.className = 'roles_item_tolls';
+
+                            const icon = document.createElement('div');
+                            icon.className = 'roles_item_icon';
+                            icon.innerHTML = `
+     <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                    <g clip-path="url(#clip0_955_2893)">
+                        <path d="M16.25 48.75L48.75 16.25" stroke="#191923" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M48.75 42.6562V16.25H22.3438" stroke="#191923" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_955_2893">
+                            <rect y="65" width="65" height="65" rx="2" transform="rotate(-90 0 65)" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+        `;
+                            tools.appendChild(icon);
+
+                            const route = document.createElement('div');
+                            route.className = 'roles_item_route';
+                            route.innerHTML = `
+            <a onclick="handleClick()" href="careerDetails.html">${item.route}</a>
+        `;
+                            tools.appendChild(route);
+
+                            const iconMobile = document.createElement('div');
+                            iconMobile.className = 'roles_item_icon_mobile';
+                            iconMobile.innerHTML = `<img src="${item.icon}" alt="${item.title}"/>`;
+                            tools.appendChild(iconMobile);
+
+                            container.appendChild(tools);
+
+                            return container;
+                        }
+
+                        function renderRolesList() {
+                            const rolesListContainer = document.getElementById('rolesListContainer');
+
+                            if (rolesList.length) {
+                                rolesList.forEach(item => {
+                                    const rolesItem = createRolesItem(item);
+                                    rolesListContainer.appendChild(rolesItem);
+                                });
+                            } else {
+                                rolesListContainer.innerHTML = '<div>Empty List</div>';
+                            }
+                        }
+
+                        // Call the function to render roles list
+                        renderRolesList();
+                    </script>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!--==================================FOOTER START========================-->
+    <div class="footer_middle_border"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+
+                <div class="footer_logo">
+                    <img src="./assets/images/Vector%20(1).png" alt=""/>
+                    <!--                        <img src="{logo}" alt=""/>}-->
+                </div>
+
+                <div class="footer_menu_block">
+                    <div class="footer_menu_row1">
+                        <ul>
+                            <li><a href="">B2B cold calling</a></li>
+                            <li><a href="">Sales assistance</a></li>
+                            <li><a href="">Social selling</a></li>
+                            <li><a href="">Establishment of CRM processes</a></li>
+                            <li><a href="">Creation of BI dashboards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_menu_row2">
+                        <ul>
+                            <li><a href="">Sales process</a></li>
+                            <li><a href="">Consulting</a></li>
+                            <li><a href="">Training of internal teams</a></li>
+                            <li><a href="">Why us?</a></li>
+                            <li><a href="">Impressum</a></li>
+                            <li><a href="">Datenschutzerklärung</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_menu_row3">
+                        <ul>
+                            <li><a href="">About us</a></li>
+                            <li><a href="">References</a></li>
+                            <li><a href="">Career</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer_contact">
+                    <div class="footer_contact_icons">
+                        <a href='' target="_blank" class="icon-linkedin2"></a>
+                        <a href='' target="_blank" class="icon-svgxmlbase642"></a>
+                        <a href='' target="_blank" class="icon-svgxmlbase643"></a>
+                        <a href='' target="_blank" class="icon-svgxmlbase644"></a>
+                    </div>
+
+                    <div class="footer_contact_info">
+                        <div class="footer_contact_location_phone">
+
+                            <div class="footer_contact_location">
+                                <img src="./assets/SvgIons/MapPin%20(1).svg" alt=""/>
+
+                                <div class="footer_contact_location_text">
+                                    <p>Hochstraße23 </p>
+                                    <p> 76530 Baden-Baden</p>
+                                </div>
+                            </div>
+
+                            <div class="footer_contact_phone">
+                                <img src="./assets/SvgIons/Phone%20(1).svg" alt=""/>
+
+                                <a href="tel:123-456-7890">+49 176 8 2325 122</a>
+                            </div>
+                        </div>
+
+                        <div class="footer_contact_email">
+                            <img src="./assets/SvgIons/Envelope%20(1).svg" alt=""/>
+                            <a href="mailto: kern@firstcallagency.de">kern@firstcallagency.de</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_end">
+                <p>© 2023 FISTCALL.COM all rights reserved </p>
+            </div>
+            <div class="footer_end_icon">
+                <span class="icon-Frame-2"></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</div>
+
+
+</body>
+</html>

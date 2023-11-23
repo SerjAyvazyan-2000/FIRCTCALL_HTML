@@ -2,11 +2,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+
     <title>FirstCall</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="assets/flex.css">
     <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -14,15 +16,52 @@
 <div class="wrapper">
 
     <!--      =====================HEADER START==========================-->
-
     <header class="header">
         <div class="G-container">
             <div class="header_content">
-                <a onclick="srollBottom()" href="#" class="header_logo">
+                <a onclick="srollBottom()" href="home.html" class="header_logo">
                     <img src="assets/svgIcons/Frame%205464%20(2).svg" alt="">
                 </a>
                 <div class="header_menu" id="menuContainer">
-                    <!-- Menu content will be added here dynamically -->
+                    <div onClick="onClose(false)" class="header_menu_bg"></div>
+
+                    <nav class="menu_block">
+                        <ul>
+                            <li>
+                                <a onclick="srollBottom()" href="./services.html">SERVICE</a>
+                            </li>
+                            <li>
+                                <a onclick="srollBottom()" href="./career.html">CAREER</a>
+                            </li>
+                            <li>
+                                <a onclick="srollBottom()" href="./services.html">References</a>
+                            </li>
+                            <li>
+                                <a onclick="srollBottom()" href="./blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a onclick="srollBottom()" href="./about.html">ABOUT US</a>
+                            </li>
+
+                            <div class="mobile_header_download">
+                                <div class="mobile_header_language">
+                                    <button onclick="openSubTools()">LANGUAGES
+                                        <img src="./assets/svgIcons/ArrowDownRight%20(1).svg" alt=""/>
+                                    </button>
+                                    <div class="header_language_sub">
+                                        <a class="header_language_en">EN</a>
+                                        <a class="header_language_de">DE</a>
+                                    </div>
+                                </div>
+                                <div class="about_header_download_btn">
+                                    <button class='header_download_btn_white'>White paper
+                                        <img src="./assets/svgIcons/DownloadSimple%20(3).svg" alt=""/>
+
+                                    </button>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
                 </div>
 
                 <div class="header_download">
@@ -51,12 +90,12 @@
 
     <main class="main">
         <!--       ========================================HOME START===========================-->
-        <section>
+        <section class="scroll-element">
             <div class="G-container">
-                <div class="svg_line_block">
+                <div id="svgLineBlock" class="svg_line_block">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1356" height="3899" viewBox="0 0 1356 3899"
                          fill="none">
-                        <path d="M789.613 3897.5L789.613 3605.85L789.613 3218L789.613 2890.71C789.613 2888.5 791.404
+                        <path id="pathElement" d="M789.613 3897.5L789.613 3605.85L789.613 3218L789.613 2890.71C789.613 2888.5 791.404
              2886.71 793.613 2886.71L991.211 2886.71C991.732 2886.71 992.248 2886.6 992.73
              2886.41L1351.94 2738.94C1353.45 2738.33 1354.43 2736.87 1354.43 2735.24L1354.43
              2391.57C1354.43 2389.36 1352.63 2387.57 1350.43 2387.57L589.515
@@ -68,11 +107,11 @@
                      1783.9L1131.13 1715.15L1131.13 1524.15C1131.13 1521.94 1132.92
                       1520.15 1135.13 1520.15L1350.43 1520.15C1352.63 1520.15 1354.43
                        1518.36 1354.43 1516.15L1354.43 1261.49L1354.43 829.5C1354.43 827.291 1352.6 825.5 1350.39 825.5C848.093 825.511 507.333 827.49 5.03713 827.501C2.82799 827.501 1.0005 825.71 1.0005 823.501L1.00049 1"
-                              stroke="black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                              stroke="black" strokeWidth="1" strokeLinecap="round"  strokeLinejoin="round"  style="stroke-dasharray: 177, 277;"/>
                     </svg>
                 </div>
 
-                <section id="section_telephone_sales" class="section_telephone_sales">
+                <div id="section_telephone_sales" class="section_telephone_sales">
                     <div class="G-container">
                         <div class="section_telephone_sales_content">
                             <div class="container">
@@ -85,7 +124,7 @@
                                                     class="excellence-btn">L’ets start
                                             </button>
                                         </div>
-                                        <div id="imageContainer" class="telephone_sales_img hover">
+                                        <div class="telephone_sales_img ">
                                             <img src="./assets/images/Rectangle.png" alt=""/>
                                         </div>
                                         <div class="excellence-btn_mobile">
@@ -94,12 +133,12 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <a href="#scrool" class="home_ellipse_block">
+                                    <a href="#scrool_our_services" class="home_ellipse_block">
                                         <div class="home_ellipse_large">
                                             <div class="home_ellipse_img">
                                                 <div class="animation_pulse"></div>
                                                 <div class="animation_pulse_2"></div>
-                                                <div class="animationт_pulse_3"></div>
+                                                <div class="animation_pulse_3"></div>
                                                 <img src="./assets/svgIcons/Group%208206%20(1).svg" alt=""/>
                                             </div>
                                         </div>
@@ -108,9 +147,8 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
-
 
         </section>
         <!--       ========================================ROTATE LOGO START===========================-->
@@ -118,7 +156,7 @@
         <section class="section_rotate_logo">
             <div class="G-container">
                 <div class="rotate_logo_block">
-                    <div class="rotate_logo">
+                    <div class="rotate_logo " id="rotateLogo">
                         <img src="assets/SvgIons/rotateLogo.svg" alt="">
                     </div>
                 </div>
@@ -126,8 +164,8 @@
         </section>
         <!--       ========================================OUR SERVICES START===========================-->
 
-        <section id="scrool" class="section_our_services">
-            <div class="G-container">
+        <section >
+            <div class="G-container section_our_services">
                 <div class="section_our_services_content">
                     <div class="container">
                         <div class="our_services_title">
@@ -137,8 +175,8 @@
                         </div>
 
                         <div class="our_services_content">
-                            <div class="our_services_content_items">
-                                <div class="our_services_content_item">
+                            <div  class="our_services_content_items">
+                                <div  class="our_services_content_item scroll-element">
                                     <div class="content_item_text">
                                         <h3>Why </h3>
                                         <p>Our passion is to help businesses achieve and exceed their sales goals. We
@@ -160,7 +198,7 @@
                                     </div>
                                 </div>
 
-                                <div class="our_services_content_item">
+                                <div class="our_services_content_item scroll-element">
                                     <div class="content_item_img_block G-center">
                                         <div class="content_image_body">
                                             <img src="assets/images/services2.png" alt=""/>
@@ -182,7 +220,7 @@
                                     </div>
                                 </div>
 
-                                <div class="our_services_content_item">
+                                <div  class="our_services_content_item scroll-element">
                                     <div class="content_item_text">
                                         <h3>WHAT </h3>
                                         <p>Our services include B2B cold calling, sales assistance, social selling, CRM
@@ -211,7 +249,7 @@
         </section>
         <!--       ========================================TELEFON SALES START===========================-->
 
-        <section class="our_telephone_sales_section">
+        <section  class="our_telephone_sales_section scroll-element">
             <div class="our_telephone_sales_content">
                 <h3>"We set the standards in B2B telephone sales - Let's take off together".</h3>
                 <span>Irma Kern</span>
@@ -219,10 +257,10 @@
         </section>
 
         <!--       ========================================PARTNERS START===========================-->
-        <section class="partners_section">
+        <section class="partners_section scroll-element">
             <div class="G-container">
-                <div class={"partners_title"}>
-                    <h3 class="partners_title active">PARTNERS</h3>
+                <div class="partners_title">
+                    <h3 id="partners_title " class="partners_title scroll-element">PARTNERS</h3>
                     <p>We offer more than the usual call centre routine. Our rbroad portfolio ranges from B2B cold
                         calling
                         and
@@ -407,11 +445,11 @@
         </section>
         <!--       ========================================PORTFOLIO START===========================-->
 
-        <section class="services_portfolio">
+        <section class="services_portfolio scroll-element">
             <div class='G-container'>
                 <div class="services_portfolio_body">
                     <div class="services_portfolio_title">
-                        <h3 class='isVisible'>SERVICES PORTFOLIO</h3>
+                        <h3 class="scroll-element" >SERVICES PORTFOLIO</h3>
                         <p>We offer more than the usual call centre routine. Our rbroad portfolio ranges from B2B cold
                             calling and existing customer care, to sales assistance, creation of CRM workflows,
                             to complex sales consulting and training for your team. Learn more on our detailed service
@@ -504,26 +542,26 @@
             </div>
         </section>
 
-        <section  class="common_problems_section">
+        <section class="common_problems_section scroll-element">
             <div class="G-container">
                 <div class="common_problems_absolute">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1650" height="600">
-                        <rect width="1650" height="600" fill="none" stroke="black" strokeWidth="4" strokeDasharray="10 15"/>
+                        <rect width="1650" height="600" fill="none" stroke="black" strokeWidth="4" style="stroke-dasharray: 10,15"/>
                     </svg>
                 </div>
 
                 <div class="common_problems_body">
-                    <div  className="common_problems_title">
-                        <h3 >Common problems in B2B new customer acquisition</h3>
-                        <p >Maximise your efficiency, visibility and profitability</p>
+                    <div class="common_problems_title">
+                        <h3 id="common_problems_title">Common problems in B2B new customer acquisition</h3>
+                        <p>Maximise your efficiency, visibility and profitability</p>
                     </div>
 
 
                     <div class="common_problems_content">
 
-                        <div   class="common_problems_scroll_block">
+                        <div class="common_problems_scroll_block">
 
-                            <div  class="common_problems_scroll">
+                            <div class="common_problems_scroll">
                                 <div class="common_problems_red_items">
 
 
@@ -569,7 +607,6 @@
                                     </div>
 
 
-
                                     <div class="common_problems_red_item">
                                         <div class="common_problems_red_item_img">
                                             <i class='icon-workflow'></i>
@@ -580,7 +617,7 @@
                                         <div class="problems_item_sub_text">
                                             <p>
                                                 Many companies are so involved in
-                                             their day-to-day business and serving their existing customers
+                                                their day-to-day business and serving their existing customers
                                                 that they hardly have time for cold calling. The time needed for
                                                 telephone canvassing is often lacking.
                                             </p>
@@ -656,7 +693,8 @@
 
                                 <div class="common_problems_list_text_block">
                                     <div class="problems_list_text_icon ">
-                                        <img src='assets/svgIcons/icon-park-outline_circular-connection%20(3).svg' alt=""/>
+                                        <img src='assets/svgIcons/icon-park-outline_circular-connection%20(3).svg'
+                                             alt=""/>
 
                                     </div>
                                     <div class="common_problems_list_text">
@@ -788,8 +826,10 @@
 
                         <div class="common_problems_list_footer">
                             <p>"From appointment qualification to training - Our service portfolio is your competitive
-                                advantage". Benefit from our comprehensive range of services that goes far beyond classic
-                                cold calling. We support you in winning new customers, maintaining existing customers and
+                                advantage". Benefit from our comprehensive range of services that goes far beyond
+                                classic
+                                cold calling. We support you in winning new customers, maintaining existing customers
+                                and
                                 optimising your sales strategy. Our service includes maintaining your CRM systems,
                                 developing new markets via
                                 social networks and training your internal team in cold calling and call centre
@@ -802,11 +842,479 @@
             </div>
         </section>
 
+        <section class="testimonials_section scroll-element">
+            <div class="G-container">
+                <section class="section_rotate_logo">
+                    <div class="G-container">
+                        <div class="testimonials_logo_block">
+                            <div class="testimonials_rotate_logo" id="rotateLogo1">
+                                <img src="assets/images/rotateLogo.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="testimonials_body">
+                    <div class="testimonials_body_title">
+                        <h3 >Testimonials</h3>
+                        <p>See what our clients say about our services and how we helped them achieve their goals.</p>
+                    </div>
+
+                    <div class="container">
+                        <div class="arrow-right">
+                            <img src="/assets/svgIcons/ArrowLeft%20(7).svg" alt="">
+                        </div>
+                        <div class="testimonials_clients_slider">
+
+
+                            <div class="swiper">
+                                <div style="display: flex;" class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <div class="testimonials_slider_item">
+                                            <div class="testimonials_clients_red_block_img">
+                                                <img src="assets/images/user.png" alt="">
+                                            </div>
+
+                                            <div class="testimonials_clients_red_block_text">
+                                                <h3>Sophia Murphy</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                                                    mollis
+                                                    nunc </p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonials_slider_item">
+                                            <div class="testimonials_clients_white_block_img">
+                                                <img src="assets/images/users1.png" alt="">
+                                            </div>
+                                            <div class="testimonials_clients_white_block_text">
+                                                <h3>Sophia Murphy</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                                                    mollis
+                                                    nunc </p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonials_slider_item">
+                                            <div class="testimonials_clients_red_block_img">
+                                                <img src="assets/images/user.png" alt="">
+                                            </div>
+
+                                            <div class="testimonials_clients_red_block_text">
+                                                <h3>Sophia Murphy</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                                                    mollis
+                                                    nunc </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+
+
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="arrow-left">
+                            <img src="/assets/svgIcons/ArrowLeft%20(6).svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials_more_btn">
+                    <button>Load MORE</button>
+                </div>
+            </div>
+        </section>
+        <!--       ========================================DistinguishesUs START===========================-->
+
+        <section class="distinguishes_us_section scroll-element" >
+            <div class="G-container">
+                <div class="distinguishes_body">
+
+                    <div id="svgSmallLineBlock" class="distinguishes_img_block">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                            <rect width="500" height="500" fill="none" stroke="black" strokeWidth="4"
+                                  style="stroke-dasharray: 10,15"/>
+                        </svg>
+
+                        <div class="distinguishes_img_block_border">
+                            <div class="distinguishes_red_block">
+                                <div class="distinguishes_white_block">
+                                    <img src="./assets/svgIcons/Vector%20(4).svg" alt="">
+
+                                </div>
+                            </div>
+
+                            <div class="distinguishes_img row1 row_1_border">
+                                <div class="img_block">
+                                    <img src="./assets/svgIcons/image5.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="distinguishes_img row2 row_2_border">
+                                <div class="img_block">
+                                    <img src="./assets/svgIcons/image2.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="distinguishes_img row3 row_3_border">
+                                <div class="img_block">
+                                    <img src="./assets/svgIcons/image.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="distinguishes_img row4 row_4_border">
+                                <div class="img_block">
+                                    <img src="./assets/svgIcons/image4.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="distinguishes_img row6 row6__border">
+                                <div class="img_block">
+                                    <img src="./assets/svgIcons/image3.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="distinguishes_img row5 row_5_border">
+                                <div class="img_block">
+                                    <img src="./assets/svgIcons/image1.svg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- Repeat the above structure for each row -->
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="distinguishes_text_block">
+                        <div class="distinguishes_text_title">
+                            <h3>What Distinguishes Us</h3>
+                        </div>
+
+                        <div class="distinguishes_text_description">
+                            <p>We redefine the call center standard. As a sales agency, we emphasize thorough training
+                                and intensive education of our staff to ensure comprehensive and competent service. Our
+                                specialization lies in consultancy-intensive and IT-based solutions,
+                                and our commitment to exclusivity ensures a competitive advantage for our clients</p>
+                            <p>
+                                Our claim? Simple: Lean. Efficient. Transparent. We strive to deliver the essential
+                                aspects
+                                of sales in a lean number of hours per week. Quality is not a by-product of our work,
+                                but
+                                the cornerstone.
+                                We build intensive customer relationships and work hard to be able to take the first
+                                place
+                                in the offer at the right time. Our way of working is intensive to successfully manage
+                                the long sales cycle in the IT industry of 6-12 months.
+                            </p>
+                            <p>
+                                We integrate seamlessly with your existing systems, providing complete transparency and
+                                ensuring a smooth handover to your sales force. We also provide weekly
+                                reporting with detailed call notes and relevant market feedback to strengthen your
+                                future
+                                sales strategy.</p>
+                        </div>
+
+                        <div class="distinguishes_see_more">
+                            <button>SEE MORE</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--       ========================================animation_section START===========================-->
+
+        <section class="animation_section G-container">
+            <div id="animationSection">
+                <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 768 568 568" fill="none">
+                    <path id="pathElementSmall" style="stroke-dasharray: 177, 277; stroke-dashoffset: 0;"
+                          d="M1 0L0.99998 318L0.999957 974.5C0.999957 976.709 2.79082 978.5 4.99996 978.5L563 978.5C565.209 978.5 567 980.291 567 982.5L567 1119.5"
+                          stroke="#191923" strokeWidth="1.5" strokeLinejoin="round"/>
+                </svg>
+            </div>
+
+        </section>
+
+
+        <!--       ========================================cooperation START===========================-->
+
+        <section class='cooperation_work_section scroll-element'>
+            <div class="G-container">
+                <div class="cooperation_title">
+                    <h3>How does the cooperation work</h3>
+                </div>
+                <div class="cooperation_list">
+
+
+                    <div class="cooperation_list_item">
+                        <div class="cooperation_list_item_border"></div>
+                        <div class="cooperation_item_img">
+                            <span class="icon-introduction"></span>
+                        </div>
+                        <div class="cooperation_item_text_block">
+                            <div class="cooperation_item_text_before">1</div>
+                            <div class="cooperation_item_text">
+                                <p>Ini="" tial Contact and Introduction</p>
+                                <p> In the first step, we get to know each other and collectively
+                                    evaluate whether a collaboration would be mutually beneficial.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cooperation_list_item">
+                        <div class="cooperation_list_item_border"></div>
+                        <div class="cooperation_item_img">
+                            <span class="icon-qualified"></span>
+                        </div>
+                        <div class="cooperation_item_text_block">
+                            <div class="cooperation_item_text_before">2</div>
+                            <div class="cooperation_item_text">
+                                <p> Contract Signing</p>
+                                <p>
+                                    We sign a legally compliant and GDPR-compliant sales
+                                    agreement to ensure that all business and data protection aspects are covered.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="cooperation_list_item">
+                        <div class="cooperation_list_item_border"></div>
+                        <div class="cooperation_item_img">
+                            <span class="icon-cloud-computing"></span>
+                        </div>
+                        <div class="cooperation_item_text_block">
+                            <div class="cooperation_item_text_before">3</div>
+                            <div class="cooperation_item_text">
+                                <p> Onboarding and Data Exchange</p>
+                                <p>
+                                    During the onboarding phase, we gather all relevant information
+                                    and either hand over or receive the lead list to ensure a smooth start.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cooperation_list_item">
+                        <div class="cooperation_list_item_border"></div>
+
+                        <div class="cooperation_item_img">
+                            <img src='./assets/svgIcons/computer 1.svg' alt=""/>
+                        </div>
+
+
+                        <div class="cooperation_item_text_block">
+                            <div class="cooperation_item_text_before">4</div>
+                            <div class="cooperation_item_text">
+                                <p>CRM Account Setup</p>
+                                <p>
+                                    A personal CRM account is set up to efficiently manage all customer data and
+                                    interactions.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="cooperation_list_item">
+                        <div class="cooperation_list_item_border"></div>
+                        <div class="cooperation_item_img">
+                            <span class="icon-calendar"></span>
+                        </div>
+                        <div class="cooperation_item_text_block">
+                            <div class="cooperation_item_text_before">5</div>
+                            <div class="cooperation_item_text">
+                                <p class="cooperation_item_text_title">Appointment Scheduling and
+                                    New Customer Acquisition</p>
+                                <p>
+
+                                    Now the phone-based sales activity can begin.
+                                    The goal is to schedule new customer appointments to successfully drive the business
+                                    forward.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="cooperation_btn">
+                    <button>make an appointment</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="telephone_middle_border"></div>
+        <!--       ========================================consultation START===========================-->
+
+        <section class="consultation_section scroll-element">
+            <div class="G-container">
+                <div class="consultation_body">
+
+                    <div class="consultation_text">
+                        <h3>Ready to take your sales processes to the next level?</h3>
+                        <a href="">CONTACT US
+                            <img src='./assets/svgIcons/ArrowDownRight%20(5).svg' alt=""/>
+                        </a>
+                    </div>
+
+                    <form class="consultation_form_block" id="consultationForm">
+                        <div class="form_title">
+                            <h3>Arrange a free consultation</h3>
+                        </div>
+
+                        <div class="consultation_form_inputs">
+                            <div class="input_block">
+                                <span>Your full name*</span>
+                                <label>
+                                    <input type="text" placeholder="First and Last name" name='fullName'/>
+                                    <p class="error-message" id="fullNameError"></p>
+                                </label>
+                            </div>
+
+                            <div class="input_block">
+                                <span>Your email*</span>
+                                <label>
+                                    <input type="email" placeholder="youremail@gmail.com" name="email"/>
+                                    <p class="error-message" id="emailError"></p>
+                                </label>
+                            </div>
+
+                            <div class="input_block select_block">
+                                <span>Phone Number*</span>
+                                <label>
+                                    <select class="form-select" id="phone" name="+49">
+                                        <option data-countryCode="ET" value="251">Ethiopia (+251)</option>
+                                        <option data-countryCode="FK" value="500">Falkland Islands (+500)</option>
+
+                                    </select>
+                                    <input type="text" placeholder="000 000 000" name="phoneNumber"/>
+                                </label>
+                                <p class="error-message" id="phoneNumberError"></p>
+                            </div>
+
+                            <div onclick="handleChangeCheek()" class="remember_me">
+                                <span>
+                                    <input type="checkbox"/>
+                                    <p>I have read the privacy policy and agree to the processing of personal data.</p>
+                                </span>
+
+                            </div>
+
+                            <button onclick="handleSubmit(event)" class="form_contact_button">SEND NOW</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--       ========================================FOOTER START===========================-->
+
+        <div id="footer_middle_border" class="footer_middle_border"></div>
+
+        <footer id="footer " class="footer active">
+            <div class="container">
+                <div class="footer_content">
+
+                    <div class="footer_logo">
+                      <img src="./assets/images/Vector%20(1).png" alt=""/>
+                    </div>
+
+                    <div class="footer_menu_block">
+                        <div class="footer_menu_row1">
+                            <ul>
+                                <li><a href="">B2B cold calling</a></li>
+                                <li><a href="">Sales assistance</a></li>
+                                <li><a href="">Social selling</a></li>
+                                <li><a href="">Establishment of CRM processes</a></li>
+                                <li><a href="">Creation of BI dashboards</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_menu_row2">
+                            <ul>
+                                <li><a href="">Sales process</a></li>
+                                <li><a href="">Consulting</a></li>
+                                <li><a href="">Training of internal teams</a></li>
+                                <li><a href="">Why us?</a></li>
+                                <li><a href="">Impressum</a></li>
+                                <li><a href="">Datenschutzerklärung</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_menu_row3">
+                            <ul>
+                                <li><a href="">About us</a></li>
+                                <li><a href="">References</a></li>
+                                <li><a href="">Career</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer_contact">
+                        <div class="footer_contact_icons">
+                            <a href='' target="_blank" class="icon-linkedin2"></a>
+                            <a href='' target="_blank" class="icon-svgxmlbase642"></a>
+                            <a href='' target="_blank" class="icon-svgxmlbase643"></a>
+                            <a href='' target="_blank" class="icon-svgxmlbase644"></a>
+                        </div>
+
+                        <div class="footer_contact_info">
+                            <div class="footer_contact_location_phone">
+
+                                <div class="footer_contact_location">
+                                    <img src="./assets/SvgIons/MapPin%20(1).svg" alt=""/>
+
+                                    <div class="footer_contact_location_text">
+                                        <p>Hochstraße23 </p>
+                                        <p> 76530 Baden-Baden</p>
+                                    </div>
+                                </div>
+
+                                <div class="footer_contact_phone">
+                                    <img src="./assets/SvgIons/Phone%20(1).svg" alt=""/>
+
+                                    <a href="tel:123-456-7890">+49 176 8 2325 122</a>
+                                </div>
+                            </div>
+
+                            <div class="footer_contact_email">
+                                <img src="./assets/SvgIons/Envelope%20(1).svg" alt=""/>
+                                <a href="mailto: kern@firstcallagency.de">kern@firstcallagency.de</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer_end">
+                    <p>© 2023 FISTCALL.COM all rights reserved </p>
+                </div>
+                <div class="footer_end_icon">
+                    <span class="icon-Frame-2"></span>
+                </div>
+            </div>
+        </footer>
+
     </main>
 
 </div>
+<script src="JS/script.js">
 
-<script src="script.js"></script>
+</script>
+<script src="JS/swiper.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./JS/animation.js"></script>
 
 </body>
 </html>
